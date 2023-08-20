@@ -5,7 +5,15 @@ body{
     font-family: 'Fraunces', serif;
 }
 .first{
+    /* position: relative; */
+    height: 707px;
+}
+header{
     position: relative;
+    background-image: url(./images/desktop/image-header.jpg);
+    background-size: 100% 707px;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 nav{
     display: flex;
@@ -129,6 +137,11 @@ h3{
     align-items: center;
     padding-top: 10%;
 }
+.prj{
+    font-weight: normal;
+    color: grey;
+    font-size: 24px;
+}
 .project-card{
     width:300px;
     height: auto;
@@ -166,9 +179,6 @@ h3{
 }
 .footer-container{
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
 }
 footer{
     background-color: hsl(168, 34%, 41%);
@@ -180,6 +190,7 @@ footer{
 }
 .f-logo{
     height: 40px;
+    fill: hsl(167, 40%, 24%);
 }
 .f-text{
     width: 400px;
@@ -187,29 +198,60 @@ footer{
     justify-content: space-between;
     margin: 30px;
     font-size: 24px;
+    color: hsl(167, 40%, 24%);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
 }
 
 .icons{
     display: flex;
     width: 200px;
     justify-content: space-evenly;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 
 @media only screen and (max-width: 1000px){
-    .egg{
-        height: 100%;
-        width: 100%;
-        object-fit: unset;
+    .first{
+        height: 500px;
     }
+    header{
+        background-size: 100% 100%;
+        height: 500px;
+    }
+
+    .hero{
+        font-size: 30px;
+    }
+    .arrow{
+        top: 40%;
+        left: 47%;
+    }
+
     .transform{
-        height: 440px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .second{
+        flex-direction: column-reverse;
     }
 
     .project-container{
         display: flex;
         flex-wrap: wrap;
+    }
+
+    .footer-container{
+        display: grid;
+        grid-template-columns: auto auto;
+        /* width: 100%; */
+    }
+    .footer-card{
+        width: 100%;
+        height: 300px;
+    }
+    .footer-img{
+        height: 300px;
     }
 
     ul{
@@ -239,6 +281,7 @@ footer{
     }
     .f-text{
         width: 300px;
+        font-size: 18px;
     }
     .photography{
         top: 250px;
